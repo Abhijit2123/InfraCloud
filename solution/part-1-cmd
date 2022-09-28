@@ -1,0 +1,3 @@
+#Below command will create a container, copy a file and make that container running
+
+docker run --name csvserver -p 9393:9300 --env CSVSERVER_BORDER=Orange -d infracloudio/csvserver ; docker cp inputdata csvserver:/csvserver/ ; docker start csvserver

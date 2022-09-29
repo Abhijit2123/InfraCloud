@@ -11,3 +11,12 @@ services :
       - type: bind
         source: ./inputdata
         target: /csvserver/inputdata
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    ports:
+      - 9090:9090
+    volumes:
+      - type: bind
+        source: ./prometheus.yml
+        target: /etc/prometheus/prometheus.yml
+

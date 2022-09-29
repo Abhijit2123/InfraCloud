@@ -8,4 +8,6 @@ services :
     environment:
       - CSVSERVER_BORDER=Orange
     volumes:
-      - .:/csvserver/ 
+      - type: bind
+        source: ./inputdata
+        target: /csvserver/inputdata
